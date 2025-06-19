@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Xác Thực Chữ Ký</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(145deg, #fbc2eb 0%, #a6c1ee 100%);
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .card-glass {
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 28px;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 8px 32px rgba(255, 105, 180, 0.25);
+      padding: 50px 30px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      animation: fadeInDown 1s;
+    }
+    .icon-container {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+      box-shadow: 0 4px 16px rgba(255, 105, 180, 0.3);
+    }
+    .icon-container i {
+      font-size: 2.5rem;
+      color: #fff;
+    }
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #fffafc;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+    .btn-verify {
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: white;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto;
+      display: block;
+    }
+    .btn-verify:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(255, 105, 180, 0.25);
+    }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card-glass animate__animated animate__fadeInDown">
+    <div class="icon-container animate__animated animate__bounceIn">
+      <i class="fa-solid fa-shield-heart"></i>
+    </div>
+    <h2>Xác Thực Chữ Ký Số</h2>
+    <p>Đảm bảo tính toàn vẹn và xác minh nguồn gốc của tệp.</p>
+    <a href="/verify" class="btn-verify">
+      <i class="fa-solid fa-circle-check"></i> Xác minh ngay
+    </a>
+  </div>
+</body>
+</html>
