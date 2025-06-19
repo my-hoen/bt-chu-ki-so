@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ký File An Toàn</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(120deg, #fbc2eb, #a18cd1);
+      min-height: 100vh;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .card-wrapper {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(20px);
+      border-radius: 24px;
+      padding: 40px 30px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      animation: fadeInDown 0.8s;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      color: #6a0572;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      color: #6a0572;
+      margin-bottom: 30px;
+    }
+
+    .btn-gradient {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      border: none;
+      color: white;
+      font-weight: bold;
+      padding: 12px 20px;
+      width: 100%;
+      border-radius: 14px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn-gradient:hover {
+      transform: scale(1.04);
+      box-shadow: 0 8px 24px rgba(255, 154, 158, 0.4);
+    }
+
+    .form-group label {
+      font-weight: 500;
+      color: #5f2755;
+    }
+
+    .icon {
+      font-size: 3rem;
+      color: #ff79a1;
+      margin-bottom: 10px;
+    }
+
+    a.btn-link {
+      margin-top: 20px;
+      display: inline-block;
+      color: #a13d63;
+    }
+
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card-wrapper">
+    <div class="icon"><i class="fa-solid fa-file-signature"></i></div>
+    <h1>Ký File</h1>
+    <p class="lead">Chọn file bạn muốn ký số bằng khóa riêng.</p>
+
+    <form action="/sign" method="post" enctype="multipart/form-data">
+      <div class="form-group text-left">
+        <label for="file">Chọn file cần ký:</label>
+        <input type="file" class="form-control" id="file" name="file" required>
+      </div>
+      <button type="submit" class="btn btn-gradient mt-3">
+        <i class="fa-solid fa-lock"></i> Ký File
+      </button>
+    </form>
+
+    <a href="/" class="btn-link">← Quay lại trang chính</a>
+  </div>
+</body>
+</html>
