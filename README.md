@@ -29,7 +29,7 @@ pip install Flask cryptography
 - Chạy ứng dụng:
 python app.py
 - Truy cập trình duyệt:
-http://127.0.0.1:5000
+http://172.16.21.49:5000  
 ![image](https://github.com/user-attachments/assets/0a23facf-81a8-45c0-ae1a-c6872c782982)
 ![image](https://github.com/user-attachments/assets/fe3346fb-7c7d-4da6-8756-95a9f968b843)
 
